@@ -7,13 +7,17 @@ const Contact = () => {
       <div className="contact-container">
         <a href="mailto: tomas.abraham@outlook.es">
           <button className="contact-btn">
-            <img src="icons/email.svg" alt="" className="svg-img contact-img" />
+            <img
+              src={process.env.PUBLIC_URL + '/icons/email.svg'}
+              alt=""
+              className="svg-img contact-img"
+            />
           </button>
         </a>
         <a href="https://github.com/Tomas2207" target="__blank">
           <button className="contact-btn">
             <img
-              src="icons/github.svg"
+              src={process.env.PUBLIC_URL + '/icons/github.svg'}
               alt=""
               className="svg-img contact-img"
             />
@@ -25,7 +29,7 @@ const Contact = () => {
         >
           <button className="contact-btn">
             <img
-              src="icons/linkedin.svg"
+              src={process.env.PUBLIC_URL + '/icons/linkedin.svg'}
               alt=""
               className="svg-img contact-img"
             />

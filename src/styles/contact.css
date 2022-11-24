@@ -1,0 +1,19 @@
+/* contact*/
+
+#contact {
+  scroll-margin-top: 100px;
+}
+
+.contact-btn {
+  border-radius: 50%;
+  border: 2px solid#f00;
+}
+
+.contact-img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(145deg)
+    brightness(101%) contrast(103%);
+}
+
+.contact-container {
+  text-align: center;
+}
