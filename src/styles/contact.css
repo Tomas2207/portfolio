@@ -49,6 +49,7 @@
   background: var(--main-color);
   color: #fff;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .contact form label {
