@@ -65,48 +65,51 @@ const Contact = () => {
   }, [submit]);
 
   return (
-    <div className="contact" id="contact">
+    <div className="contact section__padding" id="contact">
       <h2>Contact</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          name="name"
-          value={formValues.name}
-          onChange={handleChange}
-        />
-        {errors ? <p className="error">{errors.name}</p> : null}
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          value={formValues.email}
-          onChange={handleChange}
-        />
-        {errors ? <p className="error">{errors.email}</p> : null}
-        <label htmlFor="message">Message</label>
-        <textarea
-          name="message"
-          value={formValues.message}
-          onChange={handleChange}
-          cols="20"
-          rows="6"
-        ></textarea>
-        {errors ? <p className="error">{errors.message}</p> : null}
-        {loading ? (
-          <div className="message">
-            <img
-              style={{ height: '100%' }}
-              className="rotate-center"
-              src={loadingImg}
-              alt=""
-            />
-          </div>
-        ) : (
-          <button>Send</button>
-        )}
-        {message && <div className="message">{message}</div>}
-      </form>
+      <div className="form-container">
+        <h3>Let's work together!</h3>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={formValues.name}
+            onChange={handleChange}
+          />
+          {errors ? <p className="error">{errors.name}</p> : null}
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formValues.email}
+            onChange={handleChange}
+          />
+          {errors ? <p className="error">{errors.email}</p> : null}
+          <label htmlFor="message">Message</label>
+          <textarea
+            name="message"
+            value={formValues.message}
+            onChange={handleChange}
+            cols="20"
+            rows="6"
+          ></textarea>
+          {errors ? <p className="error">{errors.message}</p> : null}
+          {loading ? (
+            <div className="message">
+              <img
+                style={{ height: '100%' }}
+                className="rotate-center"
+                src={loadingImg}
+                alt=""
+              />
+            </div>
+          ) : (
+            <button>Send</button>
+          )}
+          {message && <div className="message">{message}</div>}
+        </form>
+      </div>
       <br />
       <div className="social__media">
         <div className="social__media-img">

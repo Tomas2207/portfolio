@@ -1,12 +1,10 @@
 /*About*/
 
 #about {
-  scroll-margin-top: 100px;
-  background: var(--main-color);
-  background: #000;
   color: #fff;
-  padding: 10rem 6rem;
-  overflow: hidden;
+
+  margin: 6rem 0 8rem;
+  scroll-margin-top: 100px;
 }
 
 .profile-img {
@@ -21,18 +19,18 @@
 }
 
 .about-title {
-  width: auto;
-  border-bottom: 2px solid var(--darker-main);
-  padding-bottom: 5px;
-  color: white;
   font-family: var(--title-font);
+  padding-bottom: 0.5rem;
+  color: white;
+  font-size: 40px;
+  text-align: start;
+  padding-top: 4rem;
+  border-bottom: 1px solid var(--darker-main);
 }
 
 .about-content {
   width: 100%;
   height: 50px;
-
-  text-align: center;
   font-size: 28px;
 }
 
@@ -42,14 +40,14 @@ p {
 
 .about-container {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-info {
-  width: 50%;
   font-family: var(--text-font);
   min-width: 120px;
   font-size: 1.2em;
@@ -59,18 +57,17 @@ p {
   justify-content: flex-start;
   color: #fff;
   gap: 20px;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   text-align: start;
 }
 
 .svg-img {
-  max-width: 75px;
-  min-width: 75px;
+  width: 50px;
 }
 
 .about-tech {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   background: var(--main-color);
   color: black;
@@ -80,7 +77,6 @@ p {
 }
 
 .about-tech div {
-  background-color: #000;
   color: white;
   padding: 0.4rem;
   border-radius: 5px;
@@ -97,6 +93,10 @@ p {
   gap: 20px;
   font-family: var(--title-font);
 }
+.tech__section h2 {
+  padding: 0.5rem;
+  text-align: center;
+}
 
 .about-tech > div {
   text-align: center;
@@ -106,30 +106,19 @@ p {
   .about-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-
-  .tech__section {
-    justify-content: center;
   }
   .about-info {
-    width: 80%;
     display: flex;
-    align-items: center;
-    align-self: center;
-    text-align: center;
   }
 }
 
 @media screen and (max-width: 900px) {
-  #about {
-    padding: 2rem;
+  .tech__section {
+    display: flex;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 500px) {
-  #about {
-    padding: 2rem 0.5rem;
-  }
   .about-container {
     font-size: 15px;
     line-height: 28px;

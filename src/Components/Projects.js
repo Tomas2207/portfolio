@@ -4,7 +4,7 @@ import { projectsArray } from '../constants/ProjectArray';
 
 const Projects = () => {
   return (
-    <div className="projects__container" id="projects">
+    <div className="projects__container section__padding" id="projects">
       <h2>Projects</h2>
       <div className="projects">
         {projectsArray.map((project, i) => {
@@ -17,7 +17,7 @@ const Projects = () => {
               server={project.server}
               code_url={project.code_url}
               images={project.images}
-              animation_delay={project.animation_delay}
+              animation_delay={0.2}
               key={i}
             />
           );

@@ -21,7 +21,43 @@ const Project = ({
       }}
       className="project"
     >
-      <img src={process.env.PUBLIC_URL + img_path} alt="" />
+      <div className="img-container">
+        <img src={process.env.PUBLIC_URL + img_path} alt="" />
+      </div>
+      <div className="info">
+        <div className="tech__images">
+          {images?.map((image, i) => {
+            return (
+              <img key={i} src={process.env.PUBLIC_URL + image} alt="tech" />
+            );
+          })}
+        </div>
+        <h3>{title}</h3>
+
+        <p>{desc}</p>
+      </div>
+
+      <div className="buttons">
+        <button>
+          <a href={live_url} target="__blank">
+            Live Preview
+          </a>
+        </button>
+        <button>
+          <a href={code_url} target="__blank">
+            View Code
+          </a>
+        </button>
+        {server && (
+          <button>
+            <a href={server} target="__blank">
+              View Server Code
+            </a>
+          </button>
+        )}
+      </div>
+
+      {/* <img src={process.env.PUBLIC_URL + img_path} alt="" />
       <div className="project_overlay">
         <h3>{title}</h3>
         <p>{desc}</p>
@@ -51,7 +87,7 @@ const Project = ({
             </button>
           )}
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 };
