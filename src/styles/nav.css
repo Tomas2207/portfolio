@@ -130,6 +130,11 @@ ul a:hover {
     opacity: 1;
   }
 }
+@media screen and (max-width: 1850px) {
+  .nav__padding {
+    padding: 25px 22rem;
+  }
+}
 
 @media screen and (max-width: 1700px) {
   .nav__padding {

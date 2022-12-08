@@ -48,6 +48,7 @@
   border-radius: 5px;
   background: var(--main-color);
   color: #fff;
+  padding: 0 1rem;
 }
 
 .contact form label {
@@ -75,8 +76,8 @@
 }
 
 .message {
-  background: var(--main-color);
-  color: #000;
+  background: var(--darker-main);
+  color: #fff;
   font-family: var(--text-font);
   padding: 0.5rem 1rem;
   font-size: 20px;
@@ -121,7 +122,7 @@
 
 .error {
   font-family: var(--text-font);
-  color: var(--darker-main);
+  color: #fff;
 }
 
 .rotate-center {

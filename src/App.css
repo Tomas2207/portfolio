@@ -199,6 +199,12 @@ button:hover {
   }
 }
 
+@media screen and (max-width: 1850px) {
+  .section__padding {
+    padding: 0 22rem;
+  }
+}
+
 @media screen and (max-width: 1700px) {
   .section__padding {
     padding: 0 10rem;
