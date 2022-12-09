@@ -34,7 +34,7 @@ const projectsArray = [
     title: 'Message App',
     code_url: 'https://github.com/Tomas2207/members-message',
 
-    live_url: 'https://members-message-app.onrender.com/',
+    live_url: 'https://members-message.onrender.com/',
     desc: 'Realtime message application made with Socket.io. User creation, authentication and customization. Add friends and create chatrooms',
     images: [
       '/icons/mongodb.svg',
