@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import dropdown from '../assets/dropdown.png';
+import dropdown from '../assets/hamburgermenu.svg';
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
