@@ -7,7 +7,7 @@ const projectsArray = [
     live_url: 'https://exp-manager.netlify.app/',
     desc: 'Expense manager app where you can manage and track your personal finances, as well as changing to different currencies on the spot.',
     images: [
-      '/icons/mongodb.svg',
+      '/icons/postgres.svg',
       '/icons/express.svg',
       '/icons/react.svg',
       '/icons/nodejs.svg',
