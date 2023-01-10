@@ -1,5 +1,20 @@
 const projectsArray = [
   {
+    img_path: '/img/exp-manager.png',
+    title: 'Expense Manager',
+    code_url: 'https://github.com/Tomas2207/expenses_client',
+    server: 'https://github.com/Tomas2207/expense_server',
+    live_url: 'https://exp-manager.netlify.app/',
+    desc: 'Expense manager app where you can manage and track your personal finances, as well as changing to different currencies on the spot.',
+    images: [
+      '/icons/mongodb.svg',
+      '/icons/express.svg',
+      '/icons/react.svg',
+      '/icons/nodejs.svg',
+    ],
+    animation_delay: 0,
+  },
+  {
     img_path: '/img/movie-app.png',
     title: 'Movie Application',
     code_url: 'https://github.com/Tomas2207/movie-app-client',

@@ -44,12 +44,13 @@
   font-size: 16px;
   font-family: var(--text-font);
   outline: none;
-  border: 2px solid var(--darker-main);
-  border-radius: 5px;
-  background: var(--main-color);
+  border: 1px solid var(--darker-main);
+  background: #8080800c;
   color: #fff;
   padding: 0 1rem;
   box-sizing: border-box;
+  margin-bottom: 5px;
+  border-radius: 2px;
 }
 
 .contact form label {

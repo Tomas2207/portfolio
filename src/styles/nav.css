@@ -1,14 +1,18 @@
 /*NAV*/
 
-.nav {
-  opacity: 95%;
+.nav,
+.nav_hide {
   position: sticky;
   top: 0;
-  border-bottom: 1px solid var(--main-color);
-
   color: #eeeeee;
   z-index: 6;
+  transition: 0.5s;
+  border-bottom: 0px solid var(--main-color);
+}
+
+.nav {
   background-color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
 }
 
 .nav__padding {
@@ -54,11 +58,13 @@ ul a:hover {
     display: flex;
     justify-content: flex-end;
     height: 35px;
-    padding-right: 1rem;
+    padding-right: 0.2rem;
   }
 
   .dropdown a > img {
     height: 100%;
+    width: 25px;
+    height: 25px;
   }
 
   .dropdown a > img:hover {
@@ -70,7 +76,8 @@ ul a:hover {
     transform: scale(0.9);
   }
 
-  .nav ul {
+  .nav ul,
+  .nav_hide ul {
     display: none;
   }
 

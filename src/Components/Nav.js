@@ -3,8 +3,19 @@ import dropdown from '../assets/dropdown.png';
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 1) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeColor);
+
   return (
-    <div className="nav nav__padding">
+    <div className={color ? 'nav nav__padding' : 'nav_hide nav__padding'}>
       <nav>
         <ul>
           <li>
