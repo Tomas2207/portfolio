@@ -1,6 +1,19 @@
 const projectsArray = [
   {
-    img_path: '/img/exp-manager.png',
+    img_path:
+      'https://res.cloudinary.com/dbejjbpof/video/upload/v1681886964/next-booking/simplescreenrecorder-_4_wxbrqr.mp4',
+    title: 'Planner',
+    code_url: 'https://github.com/Tomas2207/expenses_client',
+    server: 'https://github.com/Tomas2207/expense_server',
+    live_url: 'https://exp-manager.netlify.app/',
+    desc: 'Expense manager app where you can manage and track your personal finances, as well as changing to different currencies on the spot.',
+    images: ['/icons/next.svg'],
+    animation_delay: 0,
+    isVideo: true,
+  },
+  {
+    img_path:
+      'https://res.cloudinary.com/dbejjbpof/video/upload/v1681888109/expense-manager/simplescreenrecorder_fyq6ao.mp4',
     title: 'Expense Manager',
     code_url: 'https://github.com/Tomas2207/expenses_client',
     server: 'https://github.com/Tomas2207/expense_server',
@@ -13,6 +26,7 @@ const projectsArray = [
       '/icons/nodejs.svg',
     ],
     animation_delay: 0,
+    isVideo: true,
   },
   {
     img_path: '/img/movie-app.png',
@@ -28,6 +42,7 @@ const projectsArray = [
       '/icons/nodejs.svg',
     ],
     animation_delay: 0,
+    isVideo: false,
   },
   {
     img_path: '/img/school-database.png',
@@ -43,6 +58,7 @@ const projectsArray = [
       '/icons/nodejs.svg',
     ],
     animation_delay: 0.3,
+    isVideo: false,
   },
   {
     img_path: '/img/members-message.png',
@@ -58,17 +74,9 @@ const projectsArray = [
       '/icons/nodejs.svg',
     ],
     animation_delay: 0.6,
+    isVideo: false,
   },
 
-  {
-    img_path: '/img/bank-page.png',
-    title: 'Bank Landing Page ',
-    code_url: 'https://github.com/Tomas2207/bank-page',
-    live_url: 'https://tomas2207.github.io/bank-page/',
-    desc: 'Frontend app that simulates a Bank website with online banking and transactions between accounts ',
-    images: ['/icons/react.svg'],
-    animation_delay: 0.9,
-  },
   {
     img_path: '/img/shopping-cart.png',
     title: 'E-commerce Site',
@@ -77,6 +85,7 @@ const projectsArray = [
     desc: 'Frontend e-commerce React app ',
     images: ['/icons/react.svg'],
     animation_delay: 1.2,
+    isVideo: false,
   },
 ];
 

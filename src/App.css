@@ -89,6 +89,19 @@ button:hover {
   opacity: 20%;
 }
 
+.tech_home {
+  transition: 0.3s ease-out;
+  color: white;
+  height: 50px;
+}
+
+.tech_home:hover {
+  color: #ab20fd;
+  transform: scale(1.1);
+
+  cursor: pointer;
+}
+
 .home-btn {
   font-size: 26px;
   border: none;

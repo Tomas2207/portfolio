@@ -79,6 +79,7 @@ p {
 .about-tech div {
   color: white;
   padding: 0.4rem;
+  width: 5rem;
   border-radius: 5px;
   transition: 0.3s ease;
 }
@@ -100,6 +101,11 @@ p {
 
 .about-tech > div {
   text-align: center;
+}
+
+.tech_icon {
+  filter: drop-shadow(15px -10px 3px #4444dd);
+  color: #ab20fd;
 }
 
 @media screen and (max-width: 1700px) {

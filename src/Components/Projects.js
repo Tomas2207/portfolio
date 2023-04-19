@@ -17,6 +17,7 @@ const Projects = () => {
               server={project.server}
               code_url={project.code_url}
               images={project.images}
+              isVideo={project.isVideo}
               animation_delay={0.2}
               key={i}
             />

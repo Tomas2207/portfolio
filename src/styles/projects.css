@@ -28,6 +28,7 @@
   border-radius: 5px;
   border: 1px solid var(--darker-main);
   position: relative;
+  box-shadow: 10px 5px 5px var(--darker-main);
 }
 
 .project:hover .project_overlay {
@@ -82,7 +83,7 @@
   align-items: flex-end;
   padding: 1rem;
   justify-self: end;
-  /* height: 100%; */
+  margin-top: auto;
 }
 
 .buttons button {
