@@ -3,10 +3,9 @@ const projectsArray = [
     img_path:
       'https://res.cloudinary.com/dbejjbpof/video/upload/v1681886964/next-booking/simplescreenrecorder-_4_wxbrqr.mp4',
     title: 'Planner',
-    code_url: 'https://github.com/Tomas2207/expenses_client',
-    server: 'https://github.com/Tomas2207/expense_server',
-    live_url: 'https://exp-manager.netlify.app/',
-    desc: 'Expense manager app where you can manage and track your personal finances, as well as changing to different currencies on the spot.',
+    code_url: 'https://github.com/Tomas2207/next-booking',
+    live_url: 'https://planner-tomas2207.vercel.app/',
+    desc: 'Planner is a booking website that allows you to search for stays all around the world. The website uses the Booking.com API to fetch stays and Mapbox to display a map with the locations of these stays.',
     images: ['/icons/next.svg'],
     animation_delay: 0,
     isVideo: true,
