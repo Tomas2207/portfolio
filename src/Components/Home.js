@@ -3,11 +3,11 @@ import bgVideo from '../assets/bg-video.mp4';
 
 const Home = () => {
   return (
-    <div className="home section__padding" id="home">
+    <section className="home section__padding" id="home">
       <video className="video" autoPlay loop muted>
         <source src={bgVideo} type="video/mp4" />
       </video>
-      <p className=" tracking-in-expand">Hi, I am Tomas Abraham</p>
+      <p className=" tracking-in-expand">Tomas Abraham</p>
       <h2 className="home-subtitle text-focus-in">Full Stack Developer</h2>
       <div style={{ display: 'flex', gap: 10 }}>
         <a
@@ -40,7 +40,7 @@ const Home = () => {
           <button className="home-btn puff-in-center">Contact me</button>
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 

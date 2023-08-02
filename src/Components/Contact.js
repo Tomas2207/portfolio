@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import loadingImg from '../assets/loading.png';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const initialValues = { name: '', email: '', message: '' };
@@ -24,6 +25,8 @@ const Contact = () => {
     setErrors({ ...errors, [name]: null });
   };
 
+  const form = useRef();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors(validate(formValues));
@@ -34,27 +37,47 @@ const Contact = () => {
     if (Object.keys(errors).length === 0) {
       setLoading(true);
 
-      let databody = {
-        name: formValues.name,
-        email: formValues.email,
-        message: formValues.message,
-      };
+      // let databody = {
+      //   name: formValues.name,
+      //   email: formValues.email,
+      //   message: formValues.message,
+      // };
 
-      fetch(`https://portfolio-mail.onrender.com`, {
-        method: 'POST',
-        body: JSON.stringify(databody),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          setFormValues(initialValues);
-          setMessage(data);
-          setLoading(false);
-          setSubmit(false);
-        });
+      // fetch(`https://portfolio-mail.onrender.com`, {
+      //   method: 'POST',
+      //   body: JSON.stringify(databody),
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     console.log(data);
+      //     setFormValues(initialValues);
+      //     setMessage(data);
+      //     setLoading(false);
+      //     setSubmit(false);
+      //   });
+
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID,
+          form.current,
+          process.env.REACT_APP_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            setFormValues(initialValues);
+            setMessage('Message sent');
+            setLoading(false);
+            setSubmit(false);
+          },
+          (error) => {
+            setSubmit(false);
+            // show the user an error
+          }
+        );
     } else {
       setSubmit(false);
       console.log(errors);
@@ -65,11 +88,39 @@ const Contact = () => {
   }, [submit]);
 
   return (
-    <div className="contact section__padding" id="contact">
+    <section className="contact section__padding" id="contact">
       <h2>Contact</h2>
       <div className="form-container">
-        <h3>Let's work together!</h3>
-        <form onSubmit={handleSubmit}>
+        <div>
+          <h3>Let's work together!</h3>
+          <div className="social__media">
+            <div className="social__media-img">
+              <a href="https://github.com/Tomas2207" target="__blank">
+                <img
+                  src={process.env.PUBLIC_URL + '/icons/github.svg'}
+                  alt=""
+                />
+              </a>
+            </div>
+            <div className="social__media-img">
+              <a
+                href="https://www.linkedin.com/in/tom%C3%A1s-abraham-869083216/"
+                target="__blank"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + '/icons/linkedin.svg'}
+                  alt=""
+                />
+              </a>
+            </div>
+            <div className="social__media-img">
+              <a href="mailto: tomas.abraham@outlook.es">
+                <img src={process.env.PUBLIC_URL + '/icons/email.svg'} alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <form ref={form} onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -96,14 +147,14 @@ const Contact = () => {
           ></textarea>
           {errors ? <p className="error">{errors.message}</p> : null}
           {loading ? (
-            <div className="message">
+            <button disabled>
               <img
                 style={{ height: '100%' }}
                 className="rotate-center"
                 src={loadingImg}
                 alt=""
               />
-            </div>
+            </button>
           ) : (
             <button>Send</button>
           )}
@@ -111,27 +162,7 @@ const Contact = () => {
         </form>
       </div>
       <br />
-      <div className="social__media">
-        <div className="social__media-img">
-          <a href="https://github.com/Tomas2207" target="__blank">
-            <img src={process.env.PUBLIC_URL + '/icons/github.svg'} alt="" />
-          </a>
-        </div>
-        <div className="social__media-img">
-          <a
-            href="https://www.linkedin.com/in/tom%C3%A1s-abraham-869083216/"
-            target="__blank"
-          >
-            <img src={process.env.PUBLIC_URL + '/icons/linkedin.svg'} alt="" />
-          </a>
-        </div>
-        <div className="social__media-img">
-          <a href="mailto: tomas.abraham@outlook.es">
-            <img src={process.env.PUBLIC_URL + '/icons/email.svg'} alt="" />
-          </a>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

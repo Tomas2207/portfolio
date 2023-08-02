@@ -4,7 +4,7 @@ import { projectsArray } from '../constants/ProjectArray';
 
 const Projects = () => {
   return (
-    <div className="projects__container section__padding" id="projects">
+    <section className="projects__container section__padding" id="projects">
       <h2>Projects</h2>
       <div className="projects">
         {projectsArray.map((project, i) => {
@@ -24,7 +24,7 @@ const Projects = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

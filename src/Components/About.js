@@ -1,7 +1,7 @@
 import Tech from './Tech';
 import { motion } from 'framer-motion';
 import { TbBrandNextjs } from 'react-icons/tb';
-import { AiFillGithub, AiFillHtml5 } from 'react-icons/ai';
+import { AiFillGithub, AiFillGitlab, AiFillHtml5 } from 'react-icons/ai';
 import { FaNodeJs, FaReact, FaUbuntu } from 'react-icons/fa';
 import {
   SiCss3,
@@ -15,12 +15,13 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiWebpack,
+  SiMui,
 } from 'react-icons/si';
 import { BsGit } from 'react-icons/bs';
 
 const About = ({ isVisible }) => {
   return (
-    <div className="about section__padding" id="about">
+    <section className="about section__padding" id="about">
       <h3 className="about-title">About</h3>
       <div className="about-container">
         <motion.div
@@ -92,6 +93,10 @@ const About = ({ isVisible }) => {
                 <SiTailwindcss className="tech_icon" size={55} />
                 <p>Tailwindcss</p>
               </div>
+              <div>
+                <SiMui className="tech_icon" size={55} />
+                <p>Material UI</p>
+              </div>
             </div>
           </motion.div>
           <motion.div
@@ -143,6 +148,10 @@ const About = ({ isVisible }) => {
                 <p>Github</p>
               </div>
               <div>
+                <AiFillGitlab className="tech_icon" size={55} />
+                <p>GitLab</p>
+              </div>
+              <div>
                 <SiWebpack className="tech_icon" size={55} />
                 <p>Webpack</p>
               </div>
@@ -162,7 +171,7 @@ const About = ({ isVisible }) => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

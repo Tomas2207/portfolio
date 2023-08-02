@@ -19,17 +19,25 @@ const Nav = () => {
       <nav>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" className="home-link">
+              Home
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#projects" className="projects-link">
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#about" className="about-link">
+              About
+            </a>
           </li>
 
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" className="contact-link">
+              Contact
+            </a>
           </li>
           <li>
             <a href="https://blog-tomas2207.vercel.app/" target="__blank">
