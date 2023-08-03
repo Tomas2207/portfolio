@@ -16,12 +16,12 @@
   padding: 4rem 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .project {
   width: 550px;
-  margin: 2rem 0;
+  margin: 2rem auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

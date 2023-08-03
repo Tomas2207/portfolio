@@ -91,6 +91,7 @@ p {
 .tech__section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   font-family: var(--title-font);
 }
