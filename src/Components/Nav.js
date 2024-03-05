@@ -39,11 +39,6 @@ const Nav = () => {
               Contact
             </a>
           </li>
-          <li>
-            <a href="https://blog-tomas2207.vercel.app/" target="__blank">
-              Blog
-            </a>
-          </li>
         </ul>
       </nav>
       <div className="dropdown">
@@ -63,13 +58,6 @@ const Nav = () => {
             </a>
             <a onClick={() => setToggle(!toggle)} href="#contact">
               Contact
-            </a>
-            <a
-              onClick={() => setToggle(!toggle)}
-              href="https://blog-tomas2207.vercel.app/"
-              target="__blank"
-            >
-              Blog
             </a>
           </div>
         )}
