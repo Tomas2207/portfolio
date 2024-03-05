@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import loadingImg from '../assets/loading.png';
 import emailjs from '@emailjs/browser';
+import { SiUpwork } from 'react-icons/si';
 
 const Contact = () => {
   const initialValues = { name: '', email: '', message: '' };
@@ -116,6 +117,14 @@ const Contact = () => {
             <div className="social__media-img">
               <a href="mailto: tomas.abraham@outlook.es">
                 <img src={process.env.PUBLIC_URL + '/icons/email.svg'} alt="" />
+              </a>
+            </div>
+            <div className="social__media-img upwork_fill">
+              <a
+                href="https://www.upwork.com/freelancers/~016e3e456f54dfa20f"
+                target="__blank"
+              >
+                <SiUpwork fill="black" size={34} />
               </a>
             </div>
           </div>

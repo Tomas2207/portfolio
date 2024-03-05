@@ -1,5 +1,6 @@
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from 'react-icons/ai';
 import bgVideo from '../assets/bg-video.mp4';
+import { SiUpwork } from 'react-icons/si';
 
 const Home = () => {
   return (
@@ -30,6 +31,13 @@ const Home = () => {
           className="tech_home puff-in-center"
         >
           <AiFillMail size={35} />
+        </a>
+        <a
+          href="https://www.upwork.com/freelancers/~016e3e456f54dfa20f"
+          target="_blank"
+          className="tech_home puff-in-center"
+        >
+          <SiUpwork size={35} />
         </a>
       </div>
       <div className="header__button">

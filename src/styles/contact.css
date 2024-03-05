@@ -123,6 +123,10 @@
   filter: invert(100%);
 }
 
+.upwork_fill:hover path {
+  fill: white;
+}
+
 .error {
   font-family: var(--text-font);
   color: #fff;
@@ -154,7 +158,7 @@
   }
 }
 
-@media screen and (max-width: 835px) {
+@media screen and (max-width: 1080px) {
   .form-container {
     flex-direction: column;
     gap: 10px;
