@@ -19,7 +19,7 @@
   justify-content: center;
 }
 
-.project {
+/* .project {
   width: 550px;
   margin: 2rem auto;
   box-sizing: border-box;
@@ -29,6 +29,19 @@
   border: 1px solid var(--darker-main);
   position: relative;
   box-shadow: 10px 5px 5px var(--darker-main);
+} */
+
+.project {
+  flex: 1 1 calc(50% - 2rem); /* 50% width minus margin */
+  margin: 1rem; /* Adjust margin for spacing */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid var(--darker-main);
+  position: relative;
+  box-shadow: 10px 5px 5px var(--darker-main);
+  max-width: 550px; /* Optional: To limit size on larger screens */
 }
 
 .project:hover .project_overlay {
@@ -159,5 +172,17 @@
   }
   .tech__images {
     padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .project {
+    flex: 1 1 calc(100% - 2rem); /* Full width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .project {
+    margin: 1rem auto;
   }
 }

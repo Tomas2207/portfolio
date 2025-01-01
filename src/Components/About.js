@@ -1,8 +1,8 @@
-import Tech from './Tech';
-import { motion } from 'framer-motion';
-import { TbBrandNextjs } from 'react-icons/tb';
-import { AiFillGithub, AiFillGitlab, AiFillHtml5 } from 'react-icons/ai';
-import { FaNodeJs, FaReact, FaUbuntu } from 'react-icons/fa';
+import Tech from "./Tech";
+import { motion } from "framer-motion";
+import { TbBrandNextjs } from "react-icons/tb";
+import { AiFillGithub, AiFillGitlab, AiFillHtml5 } from "react-icons/ai";
+import { FaNodeJs, FaReact, FaUbuntu } from "react-icons/fa";
 import {
   SiCss3,
   SiExpress,
@@ -16,8 +16,10 @@ import {
   SiTypescript,
   SiWebpack,
   SiMui,
-} from 'react-icons/si';
-import { BsGit } from 'react-icons/bs';
+  SiSupabase,
+  SiChakraui,
+} from "react-icons/si";
+import { BsGit } from "react-icons/bs";
 
 const About = ({ isVisible }) => {
   return (
@@ -25,12 +27,13 @@ const About = ({ isVisible }) => {
       <h3 className="about-title">About</h3>
       <div className="about-container">
         <motion.div
-          initial={{ x: '-30vw', opacity: 0 }}
+          initial={{ x: "-30vw", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
             x: { duration: 1 },
-            default: { ease: 'linear' },
+            default: { ease: "linear" },
           }}
+          viewport={{ once: true }}
           className="about-info"
         >
           <p>
@@ -39,7 +42,7 @@ const About = ({ isVisible }) => {
             user-centered design to my work.
           </p>
           <p>
-            {' '}
+            {" "}
             I'm committed to creating intuitive and engaging web experiences
             that make a positive impact on users
           </p>
@@ -60,8 +63,9 @@ const About = ({ isVisible }) => {
             transition={{
               delay: 0.5,
               y: { duration: 1 },
-              default: { ease: 'linear' },
+              default: { ease: "linear" },
             }}
+            viewport={{ once: true }}
           >
             <h2>Front End</h2>
             <div className="about-tech">
@@ -97,6 +101,10 @@ const About = ({ isVisible }) => {
                 <SiMui className="tech_icon" size={55} />
                 <p>Material UI</p>
               </div>
+              <div>
+                <SiChakraui className="tech_icon" size={55} />
+                <p>Chakra UI</p>
+              </div>
             </div>
           </motion.div>
           <motion.div
@@ -105,8 +113,9 @@ const About = ({ isVisible }) => {
             transition={{
               delay: 1,
               y: { duration: 1 },
-              default: { ease: 'linear' },
+              default: { ease: "linear" },
             }}
+            viewport={{ once: true }}
           >
             <h2>Back End</h2>
             <div className="about-tech">
@@ -126,6 +135,10 @@ const About = ({ isVisible }) => {
                 <SiPostgresql className="tech_icon" size={55} />
                 <p>PostgreSQL</p>
               </div>
+              <div>
+                <SiSupabase className="tech_icon" size={55} />
+                <p>Supabase</p>
+              </div>
             </div>
           </motion.div>
           <motion.div
@@ -134,8 +147,9 @@ const About = ({ isVisible }) => {
             transition={{
               delay: 1.5,
               y: { duration: 1 },
-              default: { ease: 'linear' },
+              default: { ease: "linear" },
             }}
+            viewport={{ once: true }}
           >
             <h2>Misc.</h2>
             <div className="about-tech">

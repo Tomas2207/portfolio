@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Project = ({
   img_path,
@@ -18,22 +18,23 @@ const Project = ({
       transition={{
         delay: animation_delay,
         x: { duration: 1 },
-        default: { ease: 'linear' },
+        default: { ease: "linear" },
       }}
+      viewport={{ once: true }}
       className="project"
     >
       <div
         className="img-container"
-        style={{ position: 'relative', overflow: 'hidden' }}
+        style={{ position: "relative", overflow: "hidden" }}
       >
         {isVideo ? (
           <video
             src={img_path}
             style={{
-              width: '100%',
-              height: '100%',
-              position: 'absolute',
-              objectFit: 'cover',
+              width: "100%",
+              height: "100%",
+              position: "absolute",
+              objectFit: "cover",
             }}
             muted
             controls

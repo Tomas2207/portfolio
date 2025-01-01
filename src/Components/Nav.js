@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import dropdown from '../assets/hamburgermenu.svg';
+import { useState } from "react";
+import dropdown from "../assets/hamburgermenu.svg";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
@@ -12,10 +12,10 @@ const Nav = () => {
     }
   };
 
-  window.addEventListener('scroll', changeColor);
+  window.addEventListener("scroll", changeColor);
 
   return (
-    <div className={color ? 'nav nav__padding' : 'nav_hide nav__padding'}>
+    <div className={color ? "nav nav__padding" : "nav_hide nav__padding"}>
       <nav>
         <ul>
           <li>
@@ -46,7 +46,7 @@ const Nav = () => {
           <img src={dropdown} alt="" onClick={() => setToggle(!toggle)} />
         </a>
         {toggle && (
-          <div className="dropdown__menu tilt-in-top-2">
+          <div className="dropdown__menu grow-from-top">
             <a onClick={() => setToggle(!toggle)} href="#home">
               Home
             </a>
