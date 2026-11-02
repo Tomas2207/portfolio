@@ -1,68 +1,66 @@
-import { useState } from "react";
-import dropdown from "../assets/hamburgermenu.svg";
+import { useEffect, useState } from "react";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
-  const [color, setColor] = useState(false);
-  const changeColor = () => {
-    if (window.scrollY >= 1) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  };
+  const [scrolled, setScrolled] = useState(false);
 
-  window.addEventListener("scroll", changeColor);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 30);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const closeMenu = () => setToggle(false);
+
+  const links = [
+    { label: "Experience", href: "#experience" },
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "About", href: "#about" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   return (
-    <div className={color ? "nav nav__padding" : "nav_hide nav__padding"}>
-      <nav>
-        <ul>
-          <li>
-            <a href="#home" className="home-link">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#projects" className="projects-link">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="about-link">
-              About
-            </a>
-          </li>
-
-          <li>
-            <a href="#contact" className="contact-link">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div className="dropdown">
-        <a>
-          <img src={dropdown} alt="" onClick={() => setToggle(!toggle)} />
+    <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
+      <div className="nav__padding">
+        <a href="#home" className="nav__logo" onClick={closeMenu}>
+          TA.
         </a>
+
+        <nav className="nav__desktop">
+          {links.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <button
+          className={`nav__toggle ${toggle ? "is-open" : ""}`}
+          onClick={() => setToggle(!toggle)}
+          aria-label="Toggle navigation"
+          aria-expanded={toggle}
+        >
+          <span />
+          <span />
+        </button>
+
         {toggle && (
-          <div className="dropdown__menu grow-from-top">
-            <a onClick={() => setToggle(!toggle)} href="#home">
-              Home
-            </a>
-            <a onClick={() => setToggle(!toggle)} href="#projects">
-              Projects
-            </a>
-            <a onClick={() => setToggle(!toggle)} href="#about">
-              About
-            </a>
-            <a onClick={() => setToggle(!toggle)} href="#contact">
-              Contact
-            </a>
-          </div>
+          <nav className="nav__mobile">
+            {links.map((link) => (
+              <a key={link.href} href={link.href} onClick={closeMenu}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
         )}
       </div>
-    </div>
+    </header>
   );
 };
 

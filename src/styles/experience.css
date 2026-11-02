@@ -1,0 +1,455 @@
+.experience {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  scroll-margin-top: 80px;
+  overflow: hidden;
+}
+
+.experience__inner {
+  position: relative;
+}
+
+/* Heading */
+
+.experience__heading {
+  margin-bottom: 60px;
+}
+
+.experience__heading h2 {
+  color: var(--text-primary);
+  font-size: clamp(40px, 5vw, 60px);
+  letter-spacing: -2.5px;
+  line-height: 1.05;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.experience__intro {
+  max-width: 620px;
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+/* Experience entries */
+
+.experience__entry {
+  position: relative;
+  padding: 40px 42px;
+  background:
+    linear-gradient(
+      125deg,
+      rgba(139, 110, 230, 0.13),
+      rgba(139, 110, 230, 0.045) 45%,
+      transparent 85%
+    ),
+    var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition: border-color 0.25s ease;
+}
+
+.experience__entry:hover {
+  border-color: rgba(139, 110, 230, 0.4);
+}
+
+/* Separate positions */
+
+.experience__inner + .experience__inner {
+  margin-top: 28px;
+}
+
+/* Role header */
+
+.experience__entry-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.experience__entry-top h3 {
+  color: var(--text-primary);
+  font-size: 27px;
+  font-weight: 650;
+  letter-spacing: -0.9px;
+  line-height: 1.3;
+  margin-bottom: 9px;
+}
+
+.experience__company {
+  color: var(--accent-color);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.experience__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(139, 110, 230, 0.45);
+  padding-bottom: 6px;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.experience__link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.experience__link svg {
+  font-size: 17px;
+}
+
+/* Metadata */
+
+.experience__metadata {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  margin-top: 27px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.experience__metadata > span {
+  color: var(--text-secondary);
+  font-size: 13px;
+  letter-spacing: 0.2px;
+}
+
+.experience__recognition {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+.experience__recognition > span {
+  color: var(--accent-color);
+  font-size: 17px;
+}
+
+/* Summary */
+
+.experience__summary {
+  max-width: 850px;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 28px 0 48px;
+}
+
+/* Selected contributions */
+
+.experience__subheading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  margin-top: 20px;
+}
+
+.experience__subheading h4 {
+  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.experience__subheading > span {
+  color: var(--accent-color);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.experience__contributions {
+  border-top: 1px solid var(--border-color);
+}
+
+.experience__contribution {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 22px;
+  align-items: start;
+  gap: 20px;
+  padding: 28px 14px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.25s ease;
+}
+
+.experience__contribution:hover {
+  background: rgba(139, 110, 230, 0.075);
+}
+
+/* Optional project links */
+
+.experience__contribution--clickable {
+  cursor: pointer;
+}
+
+.experience__contribution-link {
+  display: contents;
+  color: inherit;
+  text-decoration: none;
+}
+
+.experience__contribution-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+/* Project number */
+
+.experience__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: #c2b3ff;
+  background: rgba(139, 110, 230, 0.17);
+  border: 1px solid rgba(139, 110, 230, 0.3);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Project content */
+
+.experience__contribution-content h5 {
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  transition: color 0.2s ease;
+}
+
+.experience__contribution:hover h5 {
+  color: #c2b3ff;
+}
+
+.experience__contribution-content p {
+  max-width: 760px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.85;
+  margin-bottom: 13px;
+}
+
+.experience__contribution-stack {
+  display: inline-block;
+  color: #b6a5f3;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0.1px;
+}
+
+/* Project arrow */
+
+.experience__contribution-arrow {
+  color: var(--text-muted);
+  font-size: 19px;
+  margin-top: 3px;
+  flex-shrink: 0;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.experience__contribution--clickable:hover .experience__contribution-arrow {
+  color: var(--accent-color);
+  transform: translate(3px, -3px);
+}
+
+/* Technologies, if used */
+
+.experience__technologies {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  align-items: start;
+  gap: 25px;
+  margin-top: 38px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border-color);
+}
+
+.experience__technologies h4 {
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-top: 8px;
+}
+
+.experience__technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.experience__technology-list span {
+  color: var(--text-primary);
+  background: linear-gradient(
+    135deg,
+    rgba(139, 110, 230, 0.17),
+    rgba(139, 110, 230, 0.055)
+  );
+  border: 1px solid rgba(139, 110, 230, 0.25);
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 13px;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.experience__technology-list span:hover {
+  color: #fff;
+  background: rgba(139, 110, 230, 0.25);
+  border-color: rgba(139, 110, 230, 0.6);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .experience__entry {
+    padding: 32px;
+  }
+
+  .experience__contribution {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .experience {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .experience__heading {
+    margin-bottom: 42px;
+  }
+
+  .experience__heading h2 {
+    font-size: clamp(36px, 8vw, 48px);
+    letter-spacing: -1.8px;
+  }
+
+  .experience__intro {
+    font-size: 15px;
+  }
+
+  .experience__entry {
+    padding: 26px 22px;
+  }
+
+  .experience__entry-top {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .experience__entry-top h3 {
+    font-size: 24px;
+  }
+
+  .experience__metadata {
+    gap: 12px 18px;
+  }
+
+  .experience__summary {
+    font-size: 14px;
+    margin-bottom: 38px;
+  }
+
+  .experience__contribution {
+    grid-template-columns: 34px minmax(0, 1fr) 18px;
+    gap: 12px;
+    padding: 23px 5px;
+  }
+
+  .experience__number {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+
+  .experience__contribution-content h5 {
+    font-size: 16px;
+  }
+
+  .experience__contribution-content p {
+    font-size: 13px;
+  }
+
+  .experience__contribution-stack {
+    font-size: 11px;
+  }
+
+  .experience__technologies {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .experience__entry {
+    padding: 23px 17px;
+  }
+
+  .experience__entry-top h3 {
+    font-size: 22px;
+  }
+
+  .experience__metadata > span {
+    font-size: 12px;
+  }
+
+  .experience__contribution {
+    grid-template-columns: 28px minmax(0, 1fr) 16px;
+    gap: 10px;
+  }
+
+  .experience__number {
+    width: 27px;
+    height: 27px;
+    font-size: 10px;
+  }
+
+  .experience__contribution-content h5 {
+    font-size: 15px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .experience__entry,
+  .experience__link,
+  .experience__contribution,
+  .experience__contribution-content h5,
+  .experience__contribution-arrow,
+  .experience__technology-list span {
+    transition: none;
+  }
+
+  .experience__contribution--clickable:hover .experience__contribution-arrow {
+    transform: none;
+  }
+}
