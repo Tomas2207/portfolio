@@ -22,7 +22,7 @@ const contributions = [
   },
   {
     number: "03",
-    title: "Recruiter management platform — SaaS application",
+    title: "candidate.fyi - Recruiter management platform",
     description:
       "Developed a recruitment management platform for organizing candidates, job postings, meetings, and hiring progress. Also implemented an admin panel for managing company employees and related data.",
     stack:

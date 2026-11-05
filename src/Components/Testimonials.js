@@ -11,10 +11,11 @@ const testimonials = [
     rating: 5.0,
   },
   {
-    quote: "Thank you!",
-    name: "Ted Chow",
+    quote:
+      "Tomas helped me ship a groundbreaking AI benchmark covering front-end design. Once Tomas and I were able to get comfortable working with the team, he really came alive and was one of my most reliable and highest-quality teammates on the project. Tomas's work truly helped shape the future of how AI systems use the web, and I'm very grateful to have had his help!",
+    name: "Shaun VanWeelden",
     role: "Upwork client",
-    project: "Creator monetization platform",
+    project: "AI benchmark platform",
     rating: 5.0,
   },
 ];
